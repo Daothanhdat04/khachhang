@@ -281,6 +281,29 @@
             text-align: left;
             margin-top: 20px;
         }
+
+        .confirm-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.confirm-btn {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.confirm-btn:hover {
+    background-color: #333;
+}
+
         
     </style>
 </head>
@@ -308,14 +331,10 @@
             <button id="search-btn">Tìm kiếm</button>
         </div>
     </div>
-    <div class="banner">
-        <div class="banner-overlay"></div>
-        <div class="banner-text">GIỚI THIỆU</div>
-    </div>
     <body>
       <div class="container">
         <div class="headerr">
-            <h2>Thêm khách hàng:</h2>
+            <h2>Thêm khách hàng:</h2> 
             <select class="sh2">
                 <option value="" disabled selected>Chọn căn homestay</option>
                 <option value="sunrise">Đồng Đòng Lodge</option>
@@ -338,15 +357,37 @@
                       <input type="text" class="full-width" placeholder="Nhập dữ liệu">
                   </div>
                   <div class="form-group">
-                      <label>Ngày đặt:</label>
-                      <input type="text" class="extra-small" placeholder="Ngày">
-                      &nbsp;&nbsp;&nbsp;
-  
-                      <input type="text" class="extra-small" placeholder="Tháng">
-                      &nbsp;&nbsp;&nbsp;
-  
-                      <input type="text" class="extra-small" placeholder="Năm">
-                      &nbsp;&nbsp;&nbsp;
+                    <div class="form-group">
+                        <label>Ngày đặt:</label>
+                        <select class="dropdown">
+                            <option value="" disabled selected>Ngày</option>
+                            <script>
+                                for (let i = 1; i <= 31; i++) {
+                                    document.write(`<option value="${i}">${i}</option>`);
+                                }
+                            </script>
+                        </select>
+                        &nbsp;&nbsp;&nbsp;
+                    
+                        <select class="dropdown">
+                            <option value="" disabled selected>Tháng</option>
+                            <script>
+                                for (let i = 1; i <= 12; i++) {
+                                    document.write(`<option value="${i}">Tháng ${i}</option>`);
+                                }
+                            </script>
+                        </select>
+                        &nbsp;&nbsp;&nbsp;
+                    
+                        <select class="dropdown">
+                            <option value="" disabled selected>Năm</option>
+                            <script>
+                                for (let i = 2020; i <= 2030; i++) {
+                                    document.write(`<option value="${i}">${i}</option>`);
+                                }
+                            </script>
+                        </select>
+                    </div>                      &nbsp;&nbsp;&nbsp;
                   </div>
                   <div class="form-group">
                       <label>Số lượng người:     </label>
@@ -380,15 +421,37 @@
                       <input type="text" class="full-width" placeholder="Nhập dữ liệu">
                   </div>
                   <div class="form-group">
-                      <label>Đến:</label>
-                      <input type="text" class="extra-small" placeholder="Ngày">
-                      &nbsp;&nbsp;&nbsp;
-  
-                      <input type="text" class="extra-small" placeholder="Tháng">
-                      &nbsp;&nbsp;&nbsp;
-  
-                      <input type="text" class="extra-small" placeholder="Năm">
-                      &nbsp;&nbsp;&nbsp;
+                    <div class="form-group">
+                        <label>Đến:</label>
+                        <select class="dropdown">
+                            <option value="" disabled selected>Ngày</option>
+                            <script>
+                                for (let i = 1; i <= 31; i++) {
+                                    document.write(`<option value="${i}">${i}</option>`);
+                                }
+                            </script>
+                        </select>
+                        &nbsp;&nbsp;&nbsp;
+                    
+                        <select class="dropdown">
+                            <option value="" disabled selected>Tháng</option>
+                            <script>
+                                for (let i = 1; i <= 12; i++) {
+                                    document.write(`<option value="${i}">Tháng ${i}</option>`);
+                                }
+                            </script>
+                        </select>
+                        &nbsp;&nbsp;&nbsp;
+                    
+                        <select class="dropdown">
+                            <option value="" disabled selected>Năm</option>
+                            <script>
+                                for (let i = 2020; i <= 2030; i++) {
+                                    document.write(`<option value="${i}">${i}</option>`);
+                                }
+                            </script>
+                        </select>
+                    </div>                      &nbsp;&nbsp;&nbsp;
                   </div>
                   <div class="form-group">
                       <label>Thêm người:</label>
@@ -437,6 +500,8 @@
                   <span>giờ</span>
               </div>
           </div>
+
+        
   <br>
   <div class="form-group">
     <label>Ghi chú:</label>
@@ -445,7 +510,9 @@
 
       </div>
 
-
+      <div class="confirm-container">
+        <button class="confirm-btn">Xác nhận thông tin</button>
+    </div>
 
 
 
