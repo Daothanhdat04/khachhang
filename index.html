@@ -10,7 +10,7 @@
         body {
             font-family: 'Open Sans', sans-serif;
             font-size: 18px;
-            background-color: #FAF3EA;
+            background-color: #ffffff;
             margin: 0;
             padding: 0;
         }
@@ -127,10 +127,15 @@
             color: #FFFFFF;
             z-index: 1;
         }
+
         .container {
-            width: 100%;
-            padding: 20px;
-        }
+    max-width: 900px; /* Điều chỉnh độ rộng tối đa của nội dung */
+    margin: 0 auto; /* Căn giữa nội dung */
+    background: #FAF3EA; /* Đảm bảo nền trắng trong phần chính */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng nhẹ */
+}
         h2 {
             font-size: 24px;
             margin-bottom: 10px;
@@ -309,10 +314,22 @@
     </div>
     <body>
       <div class="container">
-          <div class="headerr">
-              <h2>Thêm khách hàng:</h2>
-              <input type="text" class="sh2" placeholder="NHẬP TÊN CĂN HOMESTAY">
-          </div>
+        <div class="headerr">
+            <h2>Thêm khách hàng:</h2>
+            <select class="sh2">
+                <option value="" disabled selected>Chọn căn homestay</option>
+                <option value="sunrise">Đồng Đòng Lodge</option>
+                <option value="moonlight">Nhà RơmRơm</option>
+                <option value="starlight">Ngôi Làng Cổ TíchTích</option>
+                <option value="oceanview">EDUDORA VILLAVILLA</option>
+                <option value="mountain">STEALLAR</option>
+                <option value="forest">JOY HOUSE</option>
+                <option value="lakehouse">ARMANI VILLA</option>
+                <option value="beachside">ISLAND HOUSE IH2</option>
+                <option value="garden">THE JEFFERSON</option>
+            </select>
+        </div>
+        
                   <div class="row">
               <div class="col">
                   <br>
